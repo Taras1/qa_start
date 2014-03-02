@@ -1,7 +1,7 @@
   $(document).ready(function() {
 	var posit;
 	var pos;
-	var div= 'html';
+	var div= 'body'; //fix... div value was "html"
 	var fl=true;
 	var amount = 6;//amount of pages
 	$("a").click(function () {
@@ -9,7 +9,7 @@
 		fl=false;
       	elementClick = $(this).attr("href");
       	destination = $(elementClick).offset().top;
-		if ($.browser.webkit) {div='body'}
+		//if ($.browser.webkit) {div='body'}
 		$(div).animate({ scrollTop: destination-248}, 1000, function(){ fl=true});
      	return false;}
     });
