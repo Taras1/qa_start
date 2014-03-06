@@ -10,7 +10,7 @@
       	elementClick = $(this).attr("href");
       	destination = $(elementClick).offset().top;
 		//if ($.browser.webkit) {div='body'}
-		$(div).animate({ scrollTop: destination-248}, 1000, function(){ fl=true});
+		$(div).animate({ scrollTop: destination-148}, 1000, function(){ fl=true});
      	return false;}
     });
 	var doc=0;
@@ -23,7 +23,7 @@
 			for (var i=1; i<=amount; i++) {
 				elem=$('#menu .nav'+i+' a').attr("href");
 				pos=$(elem).offset().top;
-				if ((pos-doc-248)<=300) {
+				if ((pos-doc-148)<=300) {
 					$('#menu li').removeClass('menu_active');
 					$('#menu .nav'+i).addClass('menu_active');
 					Cufon.refresh();
