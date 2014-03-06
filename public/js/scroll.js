@@ -3,7 +3,7 @@
 	var pos;
 	var div= 'body'; //fix... div value was "html"
 	var fl=true;
-	var amount = 6;//amount of pages
+	var amount = $("#menu li").size();//amount of pages
 	$("a").click(function () {
 		if ($(this).attr("href").substr($(this).attr("href").indexOf('#'),6)=='#page_') {
 		fl=false;
@@ -14,7 +14,7 @@
      	return false;}
     });
 	var doc=0;
-	setInterval(SetActBut,150);
+	setInterval(SetActBut,250);
 	
 	function SetActBut(){
 		new_doc=$(div).attr('scrollTop');
@@ -23,7 +23,7 @@
 			for (var i=1; i<=amount; i++) {
 				elem=$('#menu .nav'+i+' a').attr("href");
 				pos=$(elem).offset().top;
-				if ((pos-doc-148)<=300) {
+				if ((pos-doc-148) <= 20) {
 					$('#menu li').removeClass('menu_active');
 					$('#menu .nav'+i).addClass('menu_active');
 					Cufon.refresh();

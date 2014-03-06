@@ -33,7 +33,7 @@ html.page[lang="en"]
                     a.icon3[href="#"]
             .wrapper
               h1
-                a#logo[href="index.html"]
+                a#logo[href="#"]
                   | Biz Time Business Company
               /ul#icons
                 li
@@ -73,6 +73,12 @@ html.page[lang="en"]
               a[href="#page_Contacts"]
                 | Контакты
         section#content
+          - if flash[:message]
+            #message
+              = flash[:message]
+          - elsif flash[:error]
+            #error
+              = flash[:error]
           #page_Home
             #slider
               img[src="images/img1.jpg" alt=""]
@@ -370,37 +376,36 @@ html.page[lang="en"]
                     .box1_right
                       .box1
                         .pad
-                          form#ContactForm
+                          form#ContactForm[action="/feedback" method="post"]
+                            input[name="authenticity_token" type="hidden" value="#{form_authenticity_token}"]
                             div
                               .wrapper
                                 span
-                                  | Your Name:
-                                input.input[type="text"]
+                                  | Имя:
+                                input.input[type="text" name="name" ]
                               .wrapper
                                 span
-                                  | Your E-mail:
-                                input.input[type="text"]
-                              .wrapper
-                                span
-                                  | Your City:
-                                input.input[type="text"]
+                                  | E-mail:
+                                input.input[type="text" name="email" ]
                               .textarea_box
                                 span
-                                  | Your Message:
-                                textarea[name="textarea" cols="1" rows="1"]
+                                  | Сообщение*:
+                                textarea[name="message" cols="1" rows="1"]
+                              div
+                                | * - обязательные поля
                               a.button[href="#" onclick="document.getElementById('ContactForm').submit()"]
                                 span.shadow
-                                | Send
-                              a.button[href="#" onclick="document.getElementById('ContactForm').reset()"]
+                                | Отправить
+                              a.button[onclick="document.getElementById('ContactForm').reset()"]
                                 span.shadow
-                                | Clear
+                                | Очистить
               .col1.pad_left1
                 .box1_bot
                   .box1_left
                     .box1_right
                       .box1
                         .pad
-                          p
+                          /p
                             span.right.marg_right2
                               | USA
                             | Country:
@@ -420,8 +425,8 @@ html.page[lang="en"]
                             br
                           p.pad_bot1
                             strong
-                              | Miscellaneous Info:
-                          |  At vero eos et accusoaus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores. 
+                              | Хочешь поддержать проект?
+                          | Как помочь скоро узнаешь)
     .body3
       .body4
         .main
