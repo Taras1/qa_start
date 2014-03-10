@@ -33,5 +33,5 @@ $(document).ready(function() {
 	$('.clicktip').aToolTip({  
 		clickIt: true,  
 		tipContent: 'Hello I am aToolTip with content from param'  
-	}); 				   
+	});
 });

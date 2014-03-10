@@ -74,10 +74,10 @@ html.page[lang="en"]
                 | Контакты
         section#content
           - if flash[:message]
-            #message
+            #message[onclick="$(this).hide()"]
               = flash[:message]
           - elsif flash[:error]
-            #error
+            #error[onclick="$(this).hide()"]
               = flash[:error]
           #page_Home
             #slider
@@ -441,5 +441,6 @@ html.page[lang="en"]
               /  | Website template
               | QA Start &copy 2014
               = " - " + Time.now.year.to_s if Time.now.year != 2014
+    #fix_height
     script[type="text/javascript"]
       |  Cufon.now(); 

@@ -622,3 +622,17 @@ footer a:hover {
     color: #000;
     font: 14px Arial, Helvetica, sans-serif
 }
+#error {
+    background: none repeat scroll 0 0 #FA5858;
+    color: #FFFFFF;
+    font: bold 15px/40px monospace;
+    margin-bottom: 12px;
+    text-align: center;
+}
+#message {
+    background: none repeat scroll 0 0 #3ADF00;
+    color: #FFFFFF;
+    font: bold 15px/40px monospace;
+    margin-bottom: 12px;
+    text-align: center;
+}
