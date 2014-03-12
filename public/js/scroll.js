@@ -1,16 +1,17 @@
 $(document).ready(function () {
     var posit;
     var pos;
-    var div = 'html'; //fix... div value was "html"
+    var div = 'html';
     var fl = true;
     var amount = $("#menu li").size();//amount of pages
     var site_scroll = document.documentElement.scrollHeight ? document.documentElement.scrollHeight : document.body.scrollHeight;
-    var extra_height = site_scroll - $("#page_Contacts").offset().top - 230
+    var extra_height = site_scroll - $("#content_Contacts").offset().top - 230
     if (extra_height > 0)
         $("#fix_height").css("height", extra_height)
     $("a").click(function () {
-        if ($(this).attr("href").substr($(this).attr("href").indexOf('#'), 6) == '#page_') {
+        if ($(this).attr("href").substr($(this).attr("href").indexOf('#'), 9) == '#content_') {
             fl = false;
+            //location.hash = $(this).attr("href");
             elementClick = $(this).attr("href");
             destination = $(elementClick).offset().top;
             if ($.browser.webkit) {div='body'}
@@ -38,4 +39,7 @@ $(document).ready(function () {
             }
         }
     }
+    var anchor = location.hash
+    $('body').scrollTop(0)
+    $("a[href="+anchor+"]").click()
 });

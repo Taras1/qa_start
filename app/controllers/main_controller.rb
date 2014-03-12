@@ -1,6 +1,7 @@
 class MainController < ApplicationController
 
   def index
+    @posts = Post.all.order :number
   end
 
   def feedback
@@ -12,7 +13,7 @@ class MainController < ApplicationController
     else
       flash[:error] = "The field for message must not be blank"
     end
-    redirect_to action: :index, anchor:"page_Contacts"
+    redirect_to action: :index, anchor:"content_Contacts"
   end
 
   protected

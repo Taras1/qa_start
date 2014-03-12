@@ -467,7 +467,9 @@ a.aToolTipCloseBtn {
 }
 
 .pad {
-    padding: 0 22px 0 30px
+    padding: 25px 22px 25px 30px
+    /*padding-top:20px;
+    padding-bottom:5px*/
 }
 
 .pad_bot1 {
