@@ -78,7 +78,7 @@ body {
 
 .body3 {
     background: #eceded;
-    padding-bottom: 20px
+    /*padding-bottom: 20px*/
 }
 
 .body4 {
@@ -546,7 +546,7 @@ footer a:hover {
 /* forms */
 #ContactForm {
     width: 367px;
-    height: 220px
+    height: 245px
 }
 
 #ContactForm textarea{

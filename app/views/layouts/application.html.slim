@@ -1,5 +1,4 @@
-| ﻿
-doctype
+doctype html
 html.page[lang="en"]
   head
     title
@@ -73,12 +72,6 @@ html.page[lang="en"]
               a[href="#page_Contacts"]
                 | Контакты
         section#content
-          - if flash[:message]
-            #message[onclick="$(this).hide()"]
-              = flash[:message]
-          - elsif flash[:error]
-            #error[onclick="$(this).hide()"]
-              = flash[:error]
           #page_Home
             #slider
               img[src="images/img1.jpg" alt=""]
@@ -369,6 +362,12 @@ html.page[lang="en"]
           #page_Contacts
             h2
               | Обратная связь
+            - if flash[:message]
+              #message[onclick="$(this).hide()"]
+                = flash[:message]
+            - elsif flash[:error]
+              #error[onclick="$(this).hide()"]
+                = flash[:error]
             .wrapper
               .col3
                 .box1_bot
@@ -393,7 +392,7 @@ html.page[lang="en"]
                                 textarea[name="message" cols="1" rows="1"]
                               div
                                 | * - обязательные поля
-                              a.button[href="#" onclick="document.getElementById('ContactForm').submit()"]
+                              a.button[href="#page_Contacts" onclick="document.getElementById('ContactForm').submit()"]
                                 span.shadow
                                 | Отправить
                               a.button[onclick="document.getElementById('ContactForm').reset()"]
@@ -427,6 +426,7 @@ html.page[lang="en"]
                             strong
                               | Хочешь поддержать проект?
                           | Как помочь скоро узнаешь)
+    #fix_height
     .body3
       .body4
         .main
@@ -441,6 +441,5 @@ html.page[lang="en"]
               /  | Website template
               | QA Start &copy 2014
               = " - " + Time.now.year.to_s if Time.now.year != 2014
-    #fix_height
     script[type="text/javascript"]
       |  Cufon.now(); 

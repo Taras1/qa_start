@@ -12,7 +12,7 @@ class MainController < ApplicationController
     else
       flash[:error] = "The field for message must not be blank"
     end
-    redirect_to action: :index
+    redirect_to action: :index, anchor:"page_Contacts"
   end
 
   protected

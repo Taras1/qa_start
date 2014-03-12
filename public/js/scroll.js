@@ -1,10 +1,11 @@
 $(document).ready(function () {
     var posit;
     var pos;
-    var div = 'body'; //fix... div value was "html"
+    var div = 'html'; //fix... div value was "html"
     var fl = true;
     var amount = $("#menu li").size();//amount of pages
-    var extra_height = $("#page_Contacts").offset().top - $("body").attr('scrollTop') - 148
+    var site_scroll = document.documentElement.scrollHeight ? document.documentElement.scrollHeight : document.body.scrollHeight;
+    var extra_height = site_scroll - $("#page_Contacts").offset().top - 230
     if (extra_height > 0)
         $("#fix_height").css("height", extra_height)
     $("a").click(function () {
@@ -12,7 +13,7 @@ $(document).ready(function () {
             fl = false;
             elementClick = $(this).attr("href");
             destination = $(elementClick).offset().top;
-            //if ($.browser.webkit) {div='body'}
+            if ($.browser.webkit) {div='body'}
             $(div).animate({ scrollTop: destination - 148}, 1000, function () {
                 fl = true
             });
