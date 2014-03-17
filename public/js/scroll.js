@@ -11,7 +11,7 @@ $(document).ready(function () {
     //var scroll = $(document).scrollTop()
     try{
         destination = $(location.hash).offset().top;
-        $(document).scrollTop(destination-148)
+        $(document).scrollTop(destination - 148)
     } catch(e) {
 
     }
@@ -49,6 +49,4 @@ $(document).ready(function () {
             }
         }
     }
-    var anchor = location.hash
-    $('body').scrollTop(0)
 });
