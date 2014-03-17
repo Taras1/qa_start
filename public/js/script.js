@@ -35,3 +35,27 @@ $(document).ready(function() {
 		tipContent: 'Hello I am aToolTip with content from param'  
 	});
 });
+function send_email(){
+    var name = "name="+$("input[name=name]").val()
+    var email = "email="+$("input[name=email]").val()
+    var message = "message="+$("textarea[name=message]").val()
+    var token = "authenticity_token="+$("input[name=authenticity_token]").val()
+    $.ajax({
+        type: "POST",
+        url: "/feedback",
+        data: name+"&"+email+"&"+message,
+        success: function(){
+            $("#message").css("display", "block")
+            $("#error").css("display", "none")
+            document.getElementById('ContactForm').reset()
+            //$("form .button").hide(500)
+            setTimeout(function(){$("#message").hide(1500)}, 3000)
+        },
+        error: function(){
+            $("#error").css("display", "block")
+            $("#message").css("display", "none")
+            //setTimeout(function(){$("#error").hide(2000)}, 2000)
+        },
+        //dataType: dataType
+    })
+}

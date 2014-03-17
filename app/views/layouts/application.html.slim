@@ -45,22 +45,14 @@ html.page[lang="en"]
           ul#menu
             = yield :menu
         section#content
-          #content_Home
-            #slider
-              img[src="images/img1.jpg" alt=""]
-              img[src="images/img2.jpg" alt=""]
-              img[src="images/img3.jpg" alt=""]
-            #slider_shadow
           = yield :posts
           #content_Contacts
-            h2
+            h2.orange_color
               | Обратная связь
-            - if flash[:message]
-              #message[onclick="$(this).hide()"]
-                = flash[:message]
-            - elsif flash[:error]
-              #error[onclick="$(this).hide()"]
-                = flash[:error]
+              #message[onclick="$(this).hide()" style="display:none"]
+                | Ваше сообщение успешно отправлено!
+              #error[onclick="$(this).hide()" style="display:none"]
+                | Пожалуйста заполните обязательные поля
             .wrapper
               .col3
                 .box1_bot
@@ -85,7 +77,7 @@ html.page[lang="en"]
                                 textarea[name="message" cols="1" rows="1"]
                               div
                                 | * - обязательные поля
-                              a.button[href="#page_Contacts" onclick="document.getElementById('ContactForm').submit()"]
+                              a.button[href="#page_Contacts" onclick="send_email()"]
                                 span.shadow
                                 | Отправить
                               a.button[onclick="document.getElementById('ContactForm').reset()"]

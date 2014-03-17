@@ -258,27 +258,55 @@ a.aToolTipCloseBtn {
     color: #f77007
 }
 
-#menu .nav1 a:hover, #menu .nav1.menu_active a {
+#menu .nav a:hover, #menu .nav1.menu_active a {
     color: #f77007
 }
 
 #menu .nav2 a:hover, #menu .nav2.menu_active a {
-    color: #a63eb0
+    color: #f77007
 }
 
 #menu .nav3 a:hover, #menu .nav3.menu_active a {
-    color: #077ef7
+    color: #f77007
 }
 
 #menu .nav4 a:hover, #menu .nav4.menu_active a {
-    color: #0aa868
+    color: #f77007
 }
 
 #menu .nav5 a:hover, #menu .nav5.menu_active a {
-    color: #e40016
+    color: #f77007
 }
 
 #menu .nav6 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav7 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav8 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav9 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav10 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav11 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav12 a:hover, #menu .nav6.menu_active a {
+    color: #f77007
+}
+
+#menu .nav13 a:hover, #menu .nav6.menu_active a {
     color: #f77007
 }
 
@@ -499,7 +527,8 @@ a.aToolTipCloseBtn {
 .box1_bot {
     border: 1px solid #d4d5d5;
     border-bottom: none;
-    background: url(../images/box1_bot.gif) bottom repeat-x
+    background: url(../images/box1_bot.gif) bottom repeat-x;
+    margin-bottom: 40px;
 }
 
 .box1_left {
@@ -630,6 +659,8 @@ footer a:hover {
     font: bold 15px/40px monospace;
     margin-bottom: 12px;
     text-align: center;
+    margin-left: -30px;
+    margin-top: 10px;
 }
 #message {
     background: none repeat scroll 0 0 #3ADF00;
@@ -637,4 +668,9 @@ footer a:hover {
     font: bold 15px/40px monospace;
     margin-bottom: 12px;
     text-align: center;
+    margin-left: -30px;
+    margin-top: 10px;
+}
+.orange_color{
+    color:#F77007;
 }
