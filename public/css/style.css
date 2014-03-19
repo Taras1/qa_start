@@ -60,7 +60,12 @@ body {
 /* Global Structure */
 .main {
     margin: 0 auto;
-    width: 900px
+    width: 1100px
+}
+
+#banner{
+    position: fixed;
+    left: 1000px;
 }
 
 .body1 {
