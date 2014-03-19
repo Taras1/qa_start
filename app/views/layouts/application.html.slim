@@ -106,5 +106,7 @@ html.page[lang="en"]
             div
               | QA Start &copy 2014
               = " - " + Time.now.year.to_s if Time.now.year != 2014
+            #metric[style="display:none"]
+              = render partial: "layouts/metric"
     script[type="text/javascript"]
       |  Cufon.now(); 
