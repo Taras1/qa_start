@@ -10,10 +10,8 @@ class MainController < ApplicationController
     # else flash message with bad news
     feedback_ = FeedBack.new feedback_params
     if feedback_.save
-      flash[:message] = "Your feedback was send successfully"
       render nothing: true, status: 200
     else
-      flash[:error] = "The field for message must not be blank"
       render nothing: true, status: 400
     end
     #redirect_to action: :index, anchor:"content_Contacts"
